@@ -46,7 +46,7 @@ void Event::triggerEvent(Kingdom &kingdom) const
         kingdom.getPopulation().setPopulation(newTotalPop);
         cout << "Population changed to " << newTotalPop << " due to event.\n";
     }
-    else if (targetSystem == "military")
+    else if (targetSystem == "military" && name != "War")
     {
 
         kingdom.getMilitary().changeMorale(impact);

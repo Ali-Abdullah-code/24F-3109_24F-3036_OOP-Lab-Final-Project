@@ -317,16 +317,17 @@ int main()
                  << "[5] Gold Mine Discovery (+500 gold)\n"
                  << "[6] Military Victory (+20 military morale)\n"
                  << "[7] Diplomatic Mission (+10 leadership popularity)\n"
-                 << "[8] Custom Event\n"
+                 << "[8] War (-12 number of soldiers)\n"
+                 << "[9] Custom Event\n"
                  << "Choose an event: ";
 
             char eventChoice = _getch();
-            if (eventChoice >= '0' && eventChoice <= '7')
+            if (eventChoice >= '0' && eventChoice <= '8')
             {
                 int eventIndex = eventChoice - '0';
                 kingdom.handleEvent(events[eventIndex]);
             }
-            else if (eventChoice == '8')
+            else if (eventChoice == '9')
             {
                 system("cls");
                 printHeader("CUSTOM EVENT");
